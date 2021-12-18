@@ -7,7 +7,7 @@ sum_my_num = 0  # Сумма необходимых чисел
 for i in coub_list:
     length = len(str(i))
     sum_i_num = 0  # Сумма чисел состовляющих i число
-    copy_i = i
+    copy_i = i # Создаем копию, что бы не изменять i
     while True:
         sum_i_num += copy_i % 10
         copy_i //= 10

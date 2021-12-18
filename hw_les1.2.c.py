@@ -8,7 +8,7 @@ for i in coub_list:
     i = i + 17  # к каждому числу списка добавили 17
     length = len(str(i))
     sum_i_num = 0  # Сумма чисел состовляющих i число
-    copy_i = i
+    copy_i = i # Создаем копию, что бы не изменять i
     while True:
         sum_i_num += copy_i % 10
         copy_i //= 10

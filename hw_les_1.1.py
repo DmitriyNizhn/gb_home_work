@@ -20,6 +20,7 @@ else:
     minutes = minutes % 60
     print(days, 'дн', hour, 'час', minutes, 'мин', sec, 'сек')
 
+# # Проверка списком
 # list_sec = list(map(int, input().split()))
 # for duration in list_sec:
 #     if duration < 60:
