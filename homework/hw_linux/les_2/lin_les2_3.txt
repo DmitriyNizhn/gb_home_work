@@ -1,0 +1,27 @@
+Last login: Thu Feb 10 13:26:55 2022 from 192.168.31.227
+user@dmgb2006:~$ logout
+Connection to 192.168.31.159 closed.
+
+C:\Users\dmitriy>ssh user@192.168.31.159
+Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.4.0-97-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Чт 10 фев 2022 14:04:55 UTC
+
+  System load:  0.0                Processes:               114
+  Usage of /:   43.7% of 10.71GB   Users logged in:         0
+  Memory usage: 11%                IPv4 address for enp0s3: 192.168.31.159
+  Swap usage:   0%
+
+
+47 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+
+
+Last login: Thu Feb 10 14:04:43 2022 from 192.168.31.227
+user@dmgb2006:~$
