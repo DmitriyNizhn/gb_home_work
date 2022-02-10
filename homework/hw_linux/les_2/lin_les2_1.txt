@@ -1,0 +1,13 @@
+root@dmgb2006:/lib/apt/methods# cd /lib
+root@dmgb2006:/lib# cd /lib/apt/methods/
+root@dmgb2006:/lib/apt/methods# cd ..
+root@dmgb2006:/lib/apt# cd /
+root@dmgb2006:/# cd -
+/lib/apt
+root@dmgb2006:/lib/apt# cd ..
+root@dmgb2006:/lib# cd ap
+apparmor/ apt/
+root@dmgb2006:/lib# cd apt/methods/
+root@dmgb2006:/lib/apt/methods# cd /
+root@dmgb2006:/# cd /lib/apt
+root@dmgb2006:/lib/apt#

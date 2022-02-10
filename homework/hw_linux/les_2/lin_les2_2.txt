@@ -1,0 +1,690 @@
+root@dmgb2006:~/les2# ls -l
+total 8
+-rw-r--r-- 1 root root  25 фев  9 17:18 task2
+-rw-r--r-- 1 root root 156 фев  9 17:21 task2_2
+root@dmgb2006:~/les2# vim task2_3
+root@dmgb2006:~/les2# sho
+shopt            showconsolefont  showkey
+root@dmgb2006:~/les2# cat task2
+asfaf
+afasf
+a
+fssaf
+ga
+g
+root@dmgb2006:~/les2# cat task2_3
+dsad
+asd
+ad
+adsadafa
+hello, World!
+root@dmgb2006:~/les2# mkdir -p dir1/dir2
+root@dmgb2006:~/les2# ls -l
+total 16
+drwxr-xr-x 3 root root 4096 фев  9 17:54 dir1
+-rw-r--r-- 1 root root   25 фев  9 17:18 task2
+-rw-r--r-- 1 root root  156 фев  9 17:21 task2_2
+-rw-r--r-- 1 root root   35 фев  9 17:52 task2_3
+root@dmgb2006:~/les2# ls -alR
+.:
+total 36
+drwxr-xr-x 3 root root  4096 фев  9 17:54 .
+drwx------ 6 root root  4096 фев  9 17:52 ..
+drwxr-xr-x 3 root root  4096 фев  9 17:54 dir1
+-rw-r--r-- 1 root root    25 фев  9 17:18 task2
+-rw-r--r-- 1 root root   156 фев  9 17:21 task2_2
+-rw-r--r-- 1 root root    35 фев  9 17:52 task2_3
+-rw------- 1 root root 12288 фев  9 17:28 .task2_3.swp
+
+./dir1:
+total 12
+drwxr-xr-x 3 root root 4096 фев  9 17:54 .
+drwxr-xr-x 3 root root 4096 фев  9 17:54 ..
+drwxr-xr-x 2 root root 4096 фев  9 17:54 dir2
+
+./dir1/dir2:
+total 8
+drwxr-xr-x 2 root root 4096 фев  9 17:54 .
+drwxr-xr-x 3 root root 4096 фев  9 17:54 ..
+root@dmgb2006:~/les2# ls -lR
+.:
+total 16
+drwxr-xr-x 3 root root 4096 фев  9 17:54 dir1
+-rw-r--r-- 1 root root   25 фев  9 17:18 task2
+-rw-r--r-- 1 root root  156 фев  9 17:21 task2_2
+-rw-r--r-- 1 root root   35 фев  9 17:52 task2_3
+
+./dir1:
+total 4
+drwxr-xr-x 2 root root 4096 фев  9 17:54 dir2
+
+./dir1/dir2:
+total 0
+root@dmgb2006:~/les2# rm .
+./            ../           .task2_3.swp
+root@dmgb2006:~/les2# rm .task2_3.swp
+root@dmgb2006:~/les2# ls -lR
+.:
+total 16
+drwxr-xr-x 3 root root 4096 фев  9 17:54 dir1
+-rw-r--r-- 1 root root   25 фев  9 17:18 task2
+-rw-r--r-- 1 root root  156 фев  9 17:21 task2_2
+-rw-r--r-- 1 root root   35 фев  9 17:52 task2_3
+
+./dir1:
+total 4
+drwxr-xr-x 2 root root 4096 фев  9 17:54 dir2
+
+./dir1/dir2:
+total 0
+root@dmgb2006:~/les2# cp -v
+dir1/    task2    task2_2  task2_3
+root@dmgb2006:~/les2# cp -v task2 /dir1/dir2
+'task2' -> '/dir1/dir2'
+cp: cannot create regular file '/dir1/dir2': No such file or directory
+root@dmgb2006:~/les2# ls -lR
+.:
+total 16
+drwxr-xr-x 3 root root 4096 фев  9 17:54 dir1
+-rw-r--r-- 1 root root   25 фев  9 17:18 task2
+-rw-r--r-- 1 root root  156 фев  9 17:21 task2_2
+-rw-r--r-- 1 root root   35 фев  9 17:52 task2_3
+
+./dir1:
+total 4
+drwxr-xr-x 2 root root 4096 фев  9 17:54 dir2
+
+./dir1/dir2:
+total 0
+root@dmgb2006:~/les2# cp -v task2
+cp: missing destination file operand after 'task2'
+Try 'cp --help' for more information.
+root@dmgb2006:~/les2# cp -v task2 copy_task2
+'task2' -> 'copy_task2'
+root@dmgb2006:~/les2# ls- l
+
+Command 'ls-' not found, did you mean:
+
+  command 'lsd' from snap lsd (0.16.0)
+  command 'lsh' from deb lsh-client (2.1-12build3)
+  command 'ls' from deb coreutils (8.30-3ubuntu2)
+  command 'lsw' from deb suckless-tools (44-1)
+  command 'lsm' from deb lsm (1.0.4-1)
+  command 'lsc' from deb livescript (1.6.0+dfsg-1)
+
+See 'snap info <snapname>' for additional versions.
+
+root@dmgb2006:~/les2# ls -l
+total 20
+-rw-r--r-- 1 root root   25 фев  9 17:59 copy_task2
+drwxr-xr-x 3 root root 4096 фев  9 17:54 dir1
+-rw-r--r-- 1 root root   25 фев  9 17:18 task2
+-rw-r--r-- 1 root root  156 фев  9 17:21 task2_2
+-rw-r--r-- 1 root root   35 фев  9 17:52 task2_3
+root@dmgb2006:~/les2# mv copy_task2 dir1/dir2/
+root@dmgb2006:~/les2# ls -lR
+.:
+total 16
+drwxr-xr-x 3 root root 4096 фев  9 17:54 dir1
+-rw-r--r-- 1 root root   25 фев  9 17:18 task2
+-rw-r--r-- 1 root root  156 фев  9 17:21 task2_2
+-rw-r--r-- 1 root root   35 фев  9 17:52 task2_3
+
+./dir1:
+total 4
+drwxr-xr-x 2 root root 4096 фев  9 17:59 dir2
+
+./dir1/dir2:
+total 4
+-rw-r--r-- 1 root root 25 фев  9 17:59 copy_task2
+root@dmgb2006:~/les2# mv task2 dir1/
+root@dmgb2006:~/les2# mv -v task2_2 dir1/
+renamed 'task2_2' -> 'dir1/task2_2'
+root@dmgb2006:~/les2# ls -lR
+.:
+total 8
+drwxr-xr-x 3 root root 4096 фев  9 18:00 dir1
+-rw-r--r-- 1 root root   35 фев  9 17:52 task2_3
+
+./dir1:
+total 12
+drwxr-xr-x 2 root root 4096 фев  9 17:59 dir2
+-rw-r--r-- 1 root root   25 фев  9 17:18 task2
+-rw-r--r-- 1 root root  156 фев  9 17:21 task2_2
+
+./dir1/dir2:
+total 4
+-rw-r--r-- 1 root root 25 фев  9 17:59 copy_task2
+root@dmgb2006:~/les2# ls -l
+total 8
+drwxr-xr-x 3 root root 4096 фев  9 18:00 dir1
+-rw-r--r-- 1 root root   35 фев  9 17:52 task2_3
+root@dmgb2006:~/les2# ir1:
+tal 4
+drwxr-xr-x 2 root root 4096 фев  9 17:59 dir2
+
+./dir1/dir2:
+total 4
+-rw-r--r-- 1 root root 25 фев  9 17:59 copy_task2
+root@dmgb2006:~/les2# mv task2 dir1/
+root@dmgb2006:~/les2# mv -v task2_2 dir1/
+renamed 'task2_2' -> 'dir1/task2_2'
+root@dmgb2006:~/les2# ls -lR
+.:
+total 8
+drwxr-xr-x 3 root root 4096 фев  9 18:00 dir1
+-rw-r--r-- 1 root root   35 фев  9 17:52 task2_3
+
+./dir1:
+total 12
+drwxr-xr-x 2 root root 4096 фев  9 17:59 dir2
+-rw-r--r-- 1 root root   25 фев  9 17:18 task2
+-rw-r--r-- 1 root root  156 фев  9 17:21 task2_2
+
+./dir1/dir2:
+total 4
+-rw-r--r-- 1 root root 25 фев  9 17:59 copy_task2
+root@dmgb2006:~/les2# ls -l
+total 8
+drwxr-xr-x 3 root root 4096 фев  9 18:00 dir1
+-rw-r--r-- 1 root root   35 фев  9 17:52 task2_3
+root@dmgb2006:~/les2#
+ir1:: command not found
+root@dmgb2006:~/les2# total 4
+
+Command 'total' not found, did you mean:
+
+  command 'topal' from deb topal (80-1build1)
+
+Try: apt install <deb name>
+
+root@dmgb2006:~/les2# drwxr-xr-x 2 root root 4096 фев  9 17:59 dir2
+drwxr-xr-x: command not found
+root@dmgb2006:~/les2#
+root@dmgb2006:~/les2# ./dir1/dir2:
+-bash: ./dir1/dir2:: No such file or directory
+root@dmgb2006:~/les2# total 4
+
+Command 'total' not found, did you mean:
+
+  command 'topal' from deb topal (80-1build1)
+
+Try: apt install <deb name>
+
+root@dmgb2006:~/les2# -rw-r--r-- 1 root root 25 фев  9 17:59 copy_task2
+-rw-r--r--: command not found
+root@dmgb2006:~/les2# root@dmgb2006:~/les2# mv task2 dir1/
+-bash: root@dmgb2006:~/les2#: No such file or directory
+root@dmgb2006:~/les2# root@dmgb2006:~/les2# mv -v task2_2 dir1/
+-bash: root@dmgb2006:~/les2#: No such file or directory
+root@dmgb2006:~/les2# renamed 'task2_2' -> 'dir1/task2_2'
+
+Command 'renamed' not found, did you mean:
+
+  command 'rename' from deb rename (1.10-1)
+
+Try: apt install <deb name>
+
+root@dmgb2006:~/les2# root@dmgb2006:~/les2# ls -lR
+-bash: root@dmgb2006:~/les2#: No such file or directory
+root@dmgb2006:~/les2# .:
+.:: command not found
+root@dmgb2006:~/les2# total 8
+
+Command 'total' not found, did you mean:
+
+  command 'topal' from deb topal (80-1build1)
+
+Try: apt install <deb name>
+
+root@dmgb2006:~/les2# drwxr-xr-x 3 root root 4096 фев  9 18:00 dir1
+drwxr-xr-x: command not found
+root@dmgb2006:~/les2# -rw-r--r-- 1 root root   35 фев  9 17:52 task2_3
+-rw-r--r--: command not found
+root@dmgb2006:~/les2#
+root@dmgb2006:~/les2# ./dir1:
+-bash: ./dir1:: No such file or directory
+root@dmgb2006:~/les2# total 12
+
+Command 'total' not found, did you mean:
+
+  command 'topal' from deb topal (80-1build1)
+
+Try: apt install <deb name>
+
+root@dmgb2006:~/les2# drwxr-xr-x 2 root root 4096 фев  9 17:59 dir2
+drwxr-xr-x: command not found
+root@dmgb2006:~/les2# -rw-r--r-- 1 root root   25 фев  9 17:18 task2
+-rw-r--r--: command not found
+root@dmgb2006:~/les2# -rw-r--r-- 1 root root  156 фев  9 17:21 task2_2
+-rw-r--r--: command not found
+root@dmgb2006:~/les2#
+root@dmgb2006:~/les2# ./dir1/dir2:
+-bash: ./dir1/dir2:: No such file or directory
+root@dmgb2006:~/les2# total 4
+ir1:
+total 4
+drwxr-xr-x 2 root root 4096 фев  9 17:59 dir2
+
+./dir1/dir2:
+total 4
+-rw-r--r-- 1 root root 25 фев  9 17:59 copy_task2
+root@dmgb2006:~/les2# mv task2 dir1/
+root@dmgb2006:~/les2# mv -v task2_2 dir1/
+renamed 'task2_2' -> 'dir1/task2_2'
+root@dmgb2006:~/les2# ls -lR
+.:
+total 8
+drwxr-xr-x 3 root root 4096 фев  9 18:00 dir1
+-rw-r--r-- 1 root root   35 фев  9 17:52 task2_3
+
+./dir1:
+total 12
+drwxr-xr-x 2 root root 4096 фев  9 17:59 dir2
+-rw-r--r-- 1 root root   25 фев  9 17:18 task2
+-rw-r--r-- 1 root root  156 фев  9 17:21 task2_2
+
+./dir1/dir2:
+total 4
+-rw-r--r-- 1 root root 25 фев  9 17:59 copy_task2
+root@dmgb2006:~/les2# ls -l
+total 8
+drwxr-xr-x 3 root root 4096 фев  9 18:00 dir1
+-rw-r--r-- 1 root root   35 фев  9 17:52 task2_3
+root@dmgb2006:~/les2#
+
+Command 'total' not found, did you mean:
+
+  command 'topal' from deb topal (80-1build1)
+
+Try: apt install <deb name>
+
+root@dmgb2006:~/les2# -rw-r--r-- 1 root root 25 фев  9 17:59 copy_task2
+-rw-r--r--: command not found
+root@dmgb2006:~/les2# root@dmgb2006:~/les2# ls -l
+-bash: root@dmgb2006:~/les2#: No such file or directory
+root@dmgb2006:~/les2# total 8
+
+Command 'total' not found, did you mean:
+
+  command 'topal' from deb topal (80-1build1)
+
+Try: apt install <deb name>
+
+root@dmgb2006:~/les2# drwxr-xr-x 3 root root 4096 фев  9 18:00 dir1
+drwxr-xr-x: command not found
+root@dmgb2006:~/les2# -rw-r--r-- 1 root root   35 фев  9 17:52 task2_3
+-rw-r--r--: command not found
+root@dmgb2006:~/les2# root@dmgb2006:~/les2#
+-bash: root@dmgb2006:~/les2#: No such file or directory
+root@dmgb2006:~/les2# ir1:
+ir1:: command not found
+root@dmgb2006:~/les2# total 4
+
+Command 'total' not found, did you mean:
+
+  command 'topal' from deb topal (80-1build1)
+
+Try: apt install <deb name>
+
+root@dmgb2006:~/les2# drwxr-xr-x 2 root root 4096 фев  9 17:59 dir2
+drwxr-xr-x: command not found
+root@dmgb2006:~/les2#
+root@dmgb2006:~/les2# ./dir1/dir2:
+-bash: ./dir1/dir2:: No such file or directory
+root@dmgb2006:~/les2# total 4
+
+Command 'total' not found, did you mean:
+
+  command 'topal' from deb topal (80-1build1)
+
+Try: apt install <deb name>
+
+root@dmgb2006:~/les2# -rw-r--r-- 1 root root 25 фев  9 17:59 copy_task2
+-rw-r--r--: command not found
+root@dmgb2006:~/les2# root@dmgb2006:~/les2# mv task2 dir1/
+-bash: root@dmgb2006:~/les2#: No such file or directory
+root@dmgb2006:~/les2# root@dmgb2006:~/les2# mv -v task2_2 dir1/
+-bash: root@dmgb2006:~/les2#: No such file or directory
+root@dmgb2006:~/les2# renamed 'task2_2' -> 'dir1/task2_2'
+
+Command 'renamed' not found, did you mean:
+
+  command 'rename' from deb rename (1.10-1)
+
+Try: apt install <deb name>
+
+root@dmgb2006:~/les2# root@dmgb2006:~/les2# ls -lR
+-bash: root@dmgb2006:~/les2#: No such file or directory
+root@dmgb2006:~/les2# .:
+.:: command not found
+root@dmgb2006:~/les2# total 8
+
+Command 'total' not found, did you mean:
+
+  command 'topal' from deb topal (80-1build1)
+
+Try: apt install <deb name>
+
+root@dmgb2006:~/les2# drwxr-xr-x 3 root root 4096 фев  9 18:00 dir1
+drwxr-xr-x: command not found
+root@dmgb2006:~/les2# -rw-r--r-- 1 root root   35 фев  9 17:52 task2_3
+-rw-r--r--: command not found
+root@dmgb2006:~/les2#
+root@dmgb2006:~/les2# ./dir1:
+-bash: ./dir1:: No such file or directory
+root@dmgb2006:~/les2# total 12
+
+Command 'total' not found, did you mean:
+
+  command 'topal' from deb topal (80-1build1)
+
+Try: apt install <deb name>
+
+root@dmgb2006:~/les2# drwxr-xr-x 2 root root 4096 фев  9 17:59 dir2
+drwxr-xr-x: command not found
+root@dmgb2006:~/les2# -rw-r--r-- 1 root root   25 фев  9 17:18 task2
+-rw-r--r--: command not found
+root@dmgb2006:~/les2# -rw-r--r-- 1 root root  156 фев  9 17:21 task2_2
+-rw-r--r--: command not found
+root@dmgb2006:~/les2#
+root@dmgb2006:~/les2# ./dir1/dir2:
+-bash: ./dir1/dir2:: No such file or directory
+root@dmgb2006:~/les2# total 4
+
+Command 'total' not found, did you mean:
+
+  command 'topal' from deb topal (80-1build1)
+
+Try: apt install <deb name>
+
+root@dmgb2006:~/les2# -rw-r--r-- 1 root root 25 фев  9 17:59 copy_task2
+-rw-r--r--: command not found
+root@dmgb2006:~/les2# root@dmgb2006:~/les2# ls -l
+-bash: root@dmgb2006:~/les2#: No such file or directory
+root@dmgb2006:~/les2# total 8
+
+Command 'total' not found, did you mean:
+
+  command 'topal' from deb topal (80-1build1)
+
+Try: apt install <deb name>
+
+root@dmgb2006:~/les2# drwxr-xr-x 3 root root 4096 фев  9 18:00 dir1
+drwxr-xr-x: command not found
+root@dmgb2006:~/les2# -rw-r--r-- 1 root root   35 фев  9 17:52 task2_3
+-rw-r--r--: command not found
+root@dmgb2006:~/les2# root@dmgb2006:~/les2#
+-bash: root@dmgb2006:~/les2#: No such file or directory
+root@dmgb2006:~/les2# ir1:
+wxr-xr-x 2 root root 4096 фев  9 17:59 dir2
+
+./dir1/dir2:
+total 4
+-rw-r--r-- 1 root root 25 фев  9 17:59 copy_task2
+root@dmgb2006:~/les2# mv task2 dir1/
+root@dmgb2006:~/les2# mv -v task2_2 dir1/
+renamed 'task2_2' -> 'dir1/task2_2'
+root@dmgb2006:~/les2# ls -lR
+.:
+total 8
+drwxr-xr-x 3 root root 4096 фев  9 18:00 dir1
+-rw-r--r-- 1 root root   35 фев  9 17:52 task2_3
+
+./dir1:
+total 12
+drwxr-xr-x 2 root root 4096 фев  9 17:59 dir2
+-rw-r--r-- 1 root root   25 фев  9 17:18 task2
+-rw-r--r-- 1 root root  156 фев  9 17:21 task2_2
+
+./dir1/dir2:
+total 4
+-rw-r--r-- 1 root root 25 фев  9 17:59 copy_task2
+root@dmgb2006:~/les2# ls -l
+total 8
+drwxr-xr-x 3 root root 4096 фев  9 18:00 dir1
+-rw-r--r-- 1 root root   35 фев  9 17:52 task2_3
+root@dmgb2006:~/les2#
+ir1:: command not found
+root@dmgb2006:~/les2# total 4
+
+Command 'total' not found, did you mean:
+
+  command 'topal' from deb topal (80-1build1)
+
+Try: apt install <deb name>
+
+root@dmgb2006:~/les2# drwxr-xr-x 2 root root 4096 фев  9 17:59 dir2
+drwxr-xr-x: command not found
+root@dmgb2006:~/les2#
+root@dmgb2006:~/les2# ./dir1/dir2:
+-bash: ./dir1/dir2:: No such file or directory
+root@dmgb2006:~/les2# total 4
+
+Command 'total' not found, did you mean:
+
+  command 'topal' from deb topal (80-1build1)
+
+Try: apt install <deb name>
+
+root@dmgb2006:~/les2# -rw-r--r-- 1 root root 25 фев  9 17:59 copy_task2
+-rw-r--r--: command not found
+root@dmgb2006:~/les2# root@dmgb2006:~/les2# mv task2 dir1/
+-bash: root@dmgb2006:~/les2#: No such file or directory
+root@dmgb2006:~/les2# root@dmgb2006:~/les2# mv -v task2_2 dir1/
+-bash: root@dmgb2006:~/les2#: No such file or directory
+root@dmgb2006:~/les2# renamed 'task2_2' -> 'dir1/task2_2'
+
+Command 'renamed' not found, did you mean:
+
+  command 'rename' from deb rename (1.10-1)
+
+Try: apt install <deb name>
+
+root@dmgb2006:~/les2# root@dmgb2006:~/les2# ls -lR
+-bash: root@dmgb2006:~/les2#: No such file or directory
+root@dmgb2006:~/les2# .:
+.:: command not found
+root@dmgb2006:~/les2# total 8
+
+Command 'total' not found, did you mean:
+
+  command 'topal' from deb topal (80-1build1)
+
+Try: apt install <deb name>
+
+root@dmgb2006:~/les2# drwxr-xr-x 3 root root 4096 фев  9 18:00 dir1
+drwxr-xr-x: command not found
+root@dmgb2006:~/les2# -rw-r--r-- 1 root root   35 фев  9 17:52 task2_3
+-rw-r--r--: command not found
+root@dmgb2006:~/les2#
+root@dmgb2006:~/les2# ./dir1:
+-bash: ./dir1:: No such file or directory
+root@dmgb2006:~/les2# total 12
+
+Command 'total' not found, did you mean:
+
+  command 'topal' from deb topal (80-1build1)
+
+Try: apt install <deb name>
+
+root@dmgb2006:~/les2# drwxr-xr-x 2 root root 4096 фев  9 17:59 dir2
+drwxr-xr-x: command not found
+root@dmgb2006:~/les2# -rw-r--r-- 1 root root   25 фев  9 17:18 task2
+-rw-r--r--: command not found
+root@dmgb2006:~/les2# -rw-r--r-- 1 root root  156 фев  9 17:21 task2_2
+-rw-r--r--: command not found
+root@dmgb2006:~/les2#
+root@dmgb2006:~/les2# ./dir1/dir2:
+-bash: ./dir1/dir2:: No such file or directory
+root@dmgb2006:~/les2# total 4
+
+Command 'total' not found, did you mean:
+
+  command 'topal' from deb topal (80-1build1)
+
+Try: apt install <deb name>
+
+root@dmgb2006:~/les2# -rw-r--r-- 1 root root 25 фев  9 17:59 copy_task2
+-rw-r--r--: command not found
+root@dmgb2006:~/les2# root@dmgb2006:~/les2# ls -l
+-bash: root@dmgb2006:~/les2#: No such file or directory
+root@dmgb2006:~/les2# total 8
+
+Command 'total' not found, did you mean:
+
+  command 'topal' from deb topal (80-1build1)
+
+Try: apt install <deb name>
+
+root@dmgb2006:~/les2# drwxr-xr-x 3 root root 4096 фев  9 18:00 dir1
+drwxr-xr-x: command not found
+root@dmgb2006:~/les2# -rw-r--r-- 1 root root   35 фев  9 17:52 task2_3
+-rw-r--r--: command not found
+root@dmgb2006:~/les2# root@dmgb2006:~/les2#
+-bash: root@dmgb2006:~/les2#: No such file or directory
+root@dmgb2006:~/les2# ir1:
+tal 4
+drwxr-xr-x 2 root root 4096 фев  9 17:59 dir2
+
+./dir1/dir2:
+total 4
+-rw-r--r-- 1 root root 25 фев  9 17:59 copy_task2
+root@dmgb2006:~/les2# mv task2 dir1/
+root@dmgb2006:~/les2# mv -v task2_2 dir1/
+renamed 'task2_2' -> 'dir1/task2_2'
+root@dmgb2006:~/les2# ls -lR
+.:
+total 8
+drwxr-xr-x 3 root root 4096 фев  9 18:00 dir1
+-rw-r--r-- 1 root root   35 фев  9 17:52 task2_3
+
+./dir1:
+total 12
+drwxr-xr-x 2 root root 4096 фев  9 17:59 dir2
+-rw-r--r-- 1 root root   25 фев  9 17:18 task2
+-rw-r--r-- 1 root root  156 фев  9 17:21 task2_2
+
+./dir1/dir2:
+total 4
+-rw-r--r-- 1 root root 25 фев  9 17:59 copy_task2
+root@dmgb2006:~/les2# ls -l
+total 8
+drwxr-xr-x 3 root root 4096 фев  9 18:00 dir1
+-rw-r--r-- 1 root root   35 фев  9 17:52 task2_3
+root@dmgb2006:~/les2#
+ir1:: command not found
+root@dmgb2006:~/les2# total 4
+
+Command 'total' not found, did you mean:
+
+  command 'topal' from deb topal (80-1build1)
+
+Try: apt install <deb name>
+
+root@dmgb2006:~/les2# drwxr-xr-x 2 root root 4096 фев  9 17:59 dir2
+drwxr-xr-x: command not found
+root@dmgb2006:~/les2#
+root@dmgb2006:~/les2# ./dir1/dir2:
+-bash: ./dir1/dir2:: No such file or directory
+root@dmgb2006:~/les2# total 4
+
+Command 'total' not found, did you mean:
+
+  command 'topal' from deb topal (80-1build1)
+
+Try: apt install <deb name>
+
+root@dmgb2006:~/les2# -rw-r--r-- 1 root root 25 фев  9 17:59 copy_task2
+-rw-r--r--: command not found
+root@dmgb2006:~/les2# root@dmgb2006:~/les2# mv task2 dir1/
+-bash: root@dmgb2006:~/les2#: No such file or directory
+root@dmgb2006:~/les2# root@dmgb2006:~/les2# mv -v task2_2 dir1/
+-bash: root@dmgb2006:~/les2#: No such file or directory
+root@dmgb2006:~/les2# renamed 'task2_2' -> 'dir1/task2_2'
+
+Command 'renamed' not found, did you mean:
+
+  command 'rename' from deb rename (1.10-1)
+
+Try: apt install <deb name>
+
+root@dmgb2006:~/les2# root@dmgb2006:~/les2# ls -lR
+-bash: root@dmgb2006:~/les2#: No such file or directory
+root@dmgb2006:~/les2# .:
+.:: command not found
+root@dmgb2006:~/les2# total 8
+
+Command 'total' not found, did you mean:
+
+  command 'topal' from deb topal (80-1build1)
+
+Try: apt install <deb name>
+
+root@dmgb2006:~/les2# drwxr-xr-x 3 root root 4096 фев  9 18:00 dir1
+drwxr-xr-x: command not found
+root@dmgb2006:~/les2# -rw-r--r-- 1 root root   35 фев  9 17:52 task2_3
+-rw-r--r--: command not found
+root@dmgb2006:~/les2#
+root@dmgb2006:~/les2# ./dir1:
+-bash: ./dir1:: No such file or directory
+root@dmgb2006:~/les2# total 12
+
+Command 'total' not found, did you mean:
+
+  command 'topal' from deb topal (80-1build1)
+
+Try: apt install <deb name>
+
+root@dmgb2006:~/les2# drwxr-xr-x 2 root root 4096 фев  9 17:59 dir2
+drwxr-xr-x: command not found
+root@dmgb2006:~/les2# -rw-r--r-- 1 root root   25 фев  9 17:18 task2
+-rw-r--r--: command not found
+root@dmgb2006:~/les2# -rw-r--r-- 1 root root  156 фев  9 17:21 task2_2
+-rw-r--r--: command not found
+root@dmgb2006:~/les2#
+root@dmgb2006:~/les2# ./dir1/dir2:
+-bash: ./dir1/dir2:: No such file or directory
+root@dmgb2006:~/les2# total 4
+
+Command 'total' not found, did you mean:
+
+  command 'topal' from deb topal (80-1build1)
+
+Try: apt install <deb name>
+
+root@dmgb2006:~/les2# -rw-r--r-- 1 root root 25 фев  9 17:59 copy_task2
+-rw-r--r--: command not found
+root@dmgb2006:~/les2# root@dmgb2006:~/les2# ls -l
+ir1:
+total 4
+drwxr-xr-x 2 root root 4096 фев  9 17:59 dir2
+
+./dir1/dir2:
+total 4
+-rw-r--r-- 1 root root 25 фев  9 17:59 copy_task2
+root@dmgb2006:~/les2# mv task2 dir1/
+root@dmgb2006:~/les2# mv -v task2_2 dir1/
+renamed 'task2_2' -> 'dir1/task2_2'
+root@dmgb2006:~/les2# ls -lR
+.:
+total 8
+drwxr-xr-x -bash: root@dmgb2006:~/les2#: No such file or directory
+root@dmgb2006:~/les2# total 8
+3 root root 4096 фев  9 18:00 dir1
+-rw-r--r-- 1 root root   35 фев  9 17:52 task2_3
+
+./dir1:
+total 12
+drwxr-xr-x 2 root root 4096 фев  9 17:59 dir2
+-rw-r--r-- 1 root root   25 фев  9 17:18 task2
+-rw-r--r-- 1 root root  156 фев  9 17:21 task2_2
+
+./dir1/dir2:
+total 4
+-rw-r--r-- 1 root root 25 фев  9 17:59 copy_task2
+root@dmgb2006:~/les2# ls -l
+total 8
+drwxr-xr-x 3 root root 4096 фев  9 18:00 dir1
+-rw-r--r-- 1 root root   35 фев  9 17:52 task2_3
+root@dmgb2006:~/les2#
