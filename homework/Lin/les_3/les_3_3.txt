@@ -1,0 +1,29 @@
+user@dmgb2006:~$ sudo nano /etc/sudoers
+user@dmgb2006:~$ su user3
+Password:
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+user3@dmgb2006:/home/user$ nano /etc/
+Display all 182 possibilities? (y or n)
+user3@dmgb2006:/home/user$ nano /etc/su
+subgid     subgid-    subuid     subuid-    sudoers    sudoers.d/
+user3@dmgb2006:/home/user$ nano /etc/sudoers
+user3@dmgb2006:/home/user$ sudo nano /etc/sudoers
+user3@dmgb2006:/home/user$ sudo ls -la
+total 60
+drwxr-xr-x 7 user user 4096 фев  9 20:18 .
+drwxr-xr-x 5 root root 4096 фев 14 17:50 ..
+-rw------- 1 user user 3452 фев 12 19:45 .bash_history
+-rw-r--r-- 1 user user  220 фев 25  2020 .bash_logout
+-rw-r--r-- 1 user user 3771 фев 25  2020 .bashrc
+drwx------ 3 user user 4096 фев  6 16:28 .cache
+drwx------ 3 user user 4096 фев  6 16:28 .config
+-rw-rw-r-- 1 user user   81 фев  7 19:04 file1
+drwxr-xr-x 3 user user 4096 фев  9 18:00 les2
+drwx------ 3 user user 4096 фев  6 16:28 .local
+-rw-r--r-- 1 user user  807 фев 25  2020 .profile
+drwx------ 2 user user 4096 фев 10 14:00 .ssh
+-rw-r--r-- 1 user user    0 фев  6 14:47 .sudo_as_admin_successful
+-rw------- 1 user user 8302 фев  9 20:18 .viminfo
+user3@dmgb2006:/home/user$
