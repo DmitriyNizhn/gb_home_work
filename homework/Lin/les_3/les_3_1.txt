@@ -1,0 +1,66 @@
+a.
+user@dmgb2006:~$ tail /etc/passwd
+uuidd:x:107:112::/run/uuidd:/usr/sbin/nologin
+tcpdump:x:108:113::/nonexistent:/usr/sbin/nologin
+landscape:x:109:115::/var/lib/landscape:/usr/sbin/nologin
+pollinate:x:110:1::/var/cache/pollinate:/bin/false
+usbmux:x:111:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin
+systemd-coredump:x:999:999:systemd Core Dumper:/:/usr/sbin/nologin
+user:x:1000:1000:Dmitriy:/home/user:/bin/bash
+lxd:x:998:100::/var/snap/lxd/common/lxd:/bin/false
+vboxadd:x:997:1::/var/run/vboxadd:/bin/false
+sshd:x:112:65534::/run/sshd:/usr/sbin/nologin
+user@dmgb2006:~$ sudo useradd -s /bin/bash -d /home/user1 -m user1
+[sudo] password for user:
+user@dmgb2006:~$ tail /etc/passwd
+tcpdump:x:108:113::/nonexistent:/usr/sbin/nologin
+landscape:x:109:115::/var/lib/landscape:/usr/sbin/nologin
+pollinate:x:110:1::/var/cache/pollinate:/bin/false
+usbmux:x:111:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin
+systemd-coredump:x:999:999:systemd Core Dumper:/:/usr/sbin/nologin
+user:x:1000:1000:Dmitriy:/home/user:/bin/bash
+lxd:x:998:100::/var/snap/lxd/common/lxd:/bin/false
+vboxadd:x:997:1::/var/run/vboxadd:/bin/false
+sshd:x:112:65534::/run/sshd:/usr/sbin/nologin
+user1:x:1001:1001::/home/user1:/bin/bash
+user@dmgb2006:~$
+
+b.
+
+user@dmgb2006:~$ userdel
+Usage: userdel [options] LOGIN
+
+Options:
+  -f, --force                   force removal of files,
+                                even if not owned by user
+  -h, --help                    display this help message and exit
+  -r, --remove                  remove home directory and mail spool
+  -R, --root CHROOT_DIR         directory to chroot into
+  -P, --prefix PREFIX_DIR       prefix directory where are located the /etc/* files
+      --extrausers              Use the extra users database
+  -Z, --selinux-user            remove any SELinux user mapping for the user
+
+user@dmgb2006:~$ userdel -r user1
+userdel: Permission denied.
+userdel: cannot lock /etc/passwd; try again later.
+user@dmgb2006:~$ sudo userdel -r user1
+userdel: user1 mail spool (/var/mail/user1) not found
+user@dmgb2006:~$ tail /etc/passwd
+uuidd:x:107:112::/run/uuidd:/usr/sbin/nologin
+tcpdump:x:108:113::/nonexistent:/usr/sbin/nologin
+landscape:x:109:115::/var/lib/landscape:/usr/sbin/nologin
+pollinate:x:110:1::/var/cache/pollinate:/bin/false
+usbmux:x:111:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin
+systemd-coredump:x:999:999:systemd Core Dumper:/:/usr/sbin/nologin
+user:x:1000:1000:Dmitriy:/home/user:/bin/bash
+lxd:x:998:100::/var/snap/lxd/common/lxd:/bin/false
+vboxadd:x:997:1::/var/run/vboxadd:/bin/false
+sshd:x:112:65534::/run/sshd:/usr/sbin/nologin
+user@dmgb2006:~$
+
+c.
+user@dmgb2006:~$ su user1
+Password:
+user1@dmgb2006:/home/user$ id
+uid=1001(user1) gid=1001(user1) groups=1001(user1)
+user1@dmgb2006:/home/user$

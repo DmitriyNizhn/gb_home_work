@@ -1,0 +1,67 @@
+a.
+user@dmgb2006:~$ tail /etc/group
+tss:x:111:
+uuidd:x:112:
+tcpdump:x:113:
+ssh:x:114:
+landscape:x:115:
+lxd:x:116:user
+systemd-coredump:x:999:
+user:x:1000:
+vboxsf:x:998:
+user2:x:1002:
+user@dmgb2006:~$ sudo nano /etc/group
+user@dmgb2006:~$ su user1
+Password:
+user1@dmgb2006:/home/user$ id
+uid=1001(user1) gid=1001(user1) groups=1001(user1)
+user1@dmgb2006:/home/user$
+
+b.
+user@dmgb2006:~$ sudo usermod user1 -g 1002
+user@dmgb2006:~$ su user1
+Password:
+user1@dmgb2006:/home/user$ id
+uid=1001(user1) gid=1002(user2) groups=1002(user2)
+user1@dmgb2006:/home/user$
+user@dmgb2006:~$ tail /etc/passwd
+landscape:x:109:115::/var/lib/landscape:/usr/sbin/nologin
+pollinate:x:110:1::/var/cache/pollinate:/bin/false
+usbmux:x:111:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin
+systemd-coredump:x:999:999:systemd Core Dumper:/:/usr/sbin/nologin
+user:x:1000:1000:Dmitriy:/home/user:/bin/bash
+lxd:x:998:100::/var/snap/lxd/common/lxd:/bin/false
+vboxadd:x:997:1::/var/run/vboxadd:/bin/false
+sshd:x:112:65534::/run/sshd:/usr/sbin/nologin
+user1:x:1001:1002::/home/user1:/bin/bash
+user2:x:1002:1002::/home/user2:/bin/bash
+user@dmgb2006:~$
+
+c.
+user@dmgb2006:~$ sudo usermod -G sudo user2
+user@dmgb2006:~$ id user2
+uid=1002(user2) gid=1002(user2) groups=1002(user2),27(sudo)
+user@dmgb2006:~$
+
+d.
+(это удаление пользователя, соответственно и из группы тоже или нужно переназначить ему основную группу?)
+user@dmgb2006:~$ sudo deluser
+Enter a user name to remove: user1
+Removing user `user1' ...
+Warning: group `user2' has no more members.
+userdel: group user1 not removed because it is not the primary group of user user1.
+Done.
+user@dmgb2006:~$ id user1
+id: ‘user1’: no such user
+user@dmgb2006:~$ tail /etc/passwd
+tcpdump:x:108:113::/nonexistent:/usr/sbin/nologin
+landscape:x:109:115::/var/lib/landscape:/usr/sbin/nologin
+pollinate:x:110:1::/var/cache/pollinate:/bin/false
+usbmux:x:111:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin
+systemd-coredump:x:999:999:systemd Core Dumper:/:/usr/sbin/nologin
+user:x:1000:1000:Dmitriy:/home/user:/bin/bash
+lxd:x:998:100::/var/snap/lxd/common/lxd:/bin/false
+vboxadd:x:997:1::/var/run/vboxadd:/bin/false
+sshd:x:112:65534::/run/sshd:/usr/sbin/nologin
+user2:x:1002:1002::/home/user2:/bin/bash
+user@dmgb2006:~$
