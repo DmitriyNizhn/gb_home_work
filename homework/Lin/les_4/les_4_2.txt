@@ -1,0 +1,33 @@
+user@dmgb2006:~$ ls -la | cut -d " " -f 1 | sort
+drwx------
+drwx------
+drwx------
+drwx------
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-------
+-rw-------
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-r--r--
+-rw-rw-r--
+-rw-rw-r--
+-rw-rw-r--
+total
+
+user@dmgb2006:~$ ls -la | cut -d " " -f 1 | uniq
+total
+drwxr-xr-x
+-rw-------
+-rw-r--r--
+drwx------
+-rw-rw-r--
+drwxr-xr-x
+drwx------
+-rw-r--r--
+drwx------
+-rw-r--r--
+-rw-------
+
