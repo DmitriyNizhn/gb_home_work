@@ -1,0 +1,60 @@
+user@dmgb2006:~$ cp file1 file2
+user@dmgb2006:~$ ln file1 file3
+user@dmgb2006:~$ ls -s file1 file4
+total 280
+398493 -rw-rw-r-- 1 user user   3634 фев 20 13:27 etc_err
+398492 -rw-rw-r-- 1 user user 262567 фев 20 13:27 etc_out
+398480 -rw-rw-r-- 2 user user     81 фев  7 19:04 file1
+398494 -rw-rw-r-- 1 user user     81 фев 20 15:22 file2
+398480 -rw-rw-r-- 2 user user     81 фев  7 19:04 file3
+398495 lrwxrwxrwx 1 user user      5 фев 20 15:22 file4 -> file1
+538971 drwxr-xr-x 3 user user   4096 фев  9 18:00 les2
+user@dmgb2006:~$
+user@dmgb2006:~$ rm file1
+user@dmgb2006:~$ ls -li
+total 276
+398493 -rw-rw-r-- 1 user user   3634 фев 20 13:27 etc_err
+398492 -rw-rw-r-- 1 user user 262567 фев 20 13:27 etc_out
+398494 -rw-rw-r-- 1 user user     81 фев 20 15:22 file2
+398480 -rw-rw-r-- 1 user user     81 фев  7 19:04 file3
+398495 lrwxrwxrwx 1 user user      5 фев 20 15:22 file4 -> file1
+538971 drwxr-xr-x 3 user user   4096 фев  9 18:00 les2
+user@dmgb2006:~$ cat file2
+asd
+adf
+adf
+a
+f
+af
+
+fbg
+g
+sf
+gafdvmslkdgmvad
+fvdfvdfvs
+vadfv
+adfbsgfb
+adb
+avdf
+v
+user@dmgb2006:~$ cat file3
+asd
+adf
+adf
+a
+f
+af
+
+fbg
+g
+sf
+gafdvmslkdgmvad
+fvdfvdfvs
+vadfv
+adfbsgfb
+adb
+avdf
+v
+user@dmgb2006:~$ cat file4
+cat: file4: No such file or directory
+user@dmgb2006:~$
