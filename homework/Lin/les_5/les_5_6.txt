@@ -1,0 +1,32 @@
+user@dmgb2006:~$ mkdir /shared/unsee
+user@dmgb2006:~$ ls -la /shared/
+total 24
+drwxrwsrwx  4 user  shared 4096 фев 20 18:55 .
+drwxr-xr-x 21 root  root   4096 фев 20 18:30 ..
+drwxr-sr-t  2 user  shared 4096 фев 20 18:48 change
+drwxrwsr-x  2 user  shared 4096 фев 20 18:55 unsee
+-rw-rw-r--  1 user  shared    6 фев 20 18:39 user
+-rw-rw-r--  1 user3 shared   18 фев 20 18:41 user3
+user@dmgb2006:~$ chmod a-r /shared/unsee/
+user@dmgb2006:~$ ls -la /shared/
+total 24
+drwxrwsrwx  4 user  shared 4096 фев 20 18:55 .
+drwxr-xr-x 21 root  root   4096 фев 20 18:30 ..
+drwxr-sr-t  2 user  shared 4096 фев 20 18:48 change
+d-wx-ws--x  2 user  shared 4096 фев 20 18:55 unsee
+-rw-rw-r--  1 user  shared    6 фев 20 18:39 user
+-rw-rw-r--  1 user3 shared   18 фев 20 18:41 user3
+user@dmgb2006:~$ touch /shared/unsee/file1
+user@dmgb2006:~$ touch /shared/unsee/file2
+user@dmgb2006:~$ echo "what is this?" /shared/unsee/file1
+what is this? /shared/unsee/file1
+user@dmgb2006:~$ echo "what is this?" > /shared/unsee/file1
+user@dmgb2006:~$ echo "You are blind" > /shared/unsee/file2
+user@dmgb2006:~$ ls -la /shared/u
+unsee/ user   user3
+user@dmgb2006:~$ ls -la /shared/unsee/
+ls: cannot open directory '/shared/unsee/': Permission denied
+user@dmgb2006:~$ cat /shared/unsee/file1
+what is this?
+user@dmgb2006:~$ cat /shared/unsee/file2
+You are blind

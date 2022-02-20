@@ -1,0 +1,29 @@
+user@dmgb2006:~$ mv file2 123
+user@dmgb2006:~$ mv file3 456
+user@dmgb2006:~$ mv file4 789
+user@dmgb2006:~$ ls -la
+total 332
+drwxr-xr-x 7 user user   4096 фев 20 15:34 .
+drwxr-xr-x 5 root root   4096 фев 14 17:50 ..
+-rw-rw-r-- 1 user user     81 фев 20 15:22 123
+-rw-rw-r-- 1 user user     81 фев  7 19:04 456
+lrwxrwxrwx 1 user user      5 фев 20 15:22 789 -> file1
+-rw------- 1 user user   6277 фев 20 14:35 .bash_history
+-rw-r--r-- 1 user user    220 фев 25  2020 .bash_logout
+-rw-r--r-- 1 user user   3771 фев 25  2020 .bashrc
+drwx------ 3 user user   4096 фев  6 16:28 .cache
+drwx------ 3 user user   4096 фев  6 16:28 .config
+-rw-rw-r-- 1 user user   3634 фев 20 13:27 etc_err
+-rw-rw-r-- 1 user user 262567 фев 20 13:27 etc_out
+drwxr-xr-x 3 user user   4096 фев  9 18:00 les2
+drwx------ 3 user user   4096 фев  6 16:28 .local
+-rw-r--r-- 1 user user    807 фев 25  2020 .profile
+drwx------ 2 user user   4096 фев 10 14:00 .ssh
+-rw-r--r-- 1 user user      0 фев  6 14:47 .sudo_as_admin_successful
+-rw------- 1 user user   8302 фев  9 20:18 .viminfo
+user@dmgb2006:~$ mv 789 linkdir/
+user@dmgb2006:~$ ls linkdir
+789
+user@dmgb2006:~$ ln -s 456 linkdir/link_456
+user@dmgb2006:~$ ls linkdir/
+789  link_456

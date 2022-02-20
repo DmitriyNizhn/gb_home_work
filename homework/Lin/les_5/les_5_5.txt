@@ -1,0 +1,27 @@
+user@dmgb2006:~$ sudo chown user /shared/change/
+user@dmgb2006:~$ ls -la /shared/
+total 20
+drwxrwsrwx  3 user  shared 4096 фев 20 18:43 .
+drwxr-xr-x 21 root  root   4096 фев 20 18:30 ..
+drwxr-sr-t  2 user  shared 4096 фев 20 18:43 change
+-rw-rw-r--  1 user  shared    6 фев 20 18:39 user
+-rw-rw-r--  1 user3 shared   18 фев 20 18:41 user3
+user@dmgb2006:~$ touch /shared/change/user_del
+user@dmgb2006:~$ ls -la /shared/change/
+total 8
+drwxr-sr-t 2 user shared 4096 фев 20 18:45 .
+drwxrwsrwx 3 user shared 4096 фев 20 18:43 ..
+-rw-rw-r-- 1 user shared    0 фев 20 18:45 user_del
+user3@dmgb2006:~$ echo "sadas" >> /shared/change/user_del
+user3@dmgb2006:~$ cat /shared/change/user_del
+sadas
+user3@dmgb2006:~$ rm /shared/change/user_del
+rm: cannot remove '/shared/change/user_del': Permission denied
+user@dmgb2006:~$ cat /shared/change/user_del
+sadas
+user@dmgb2006:~$ rm /shared/change/user_del
+user@dmgb2006:~$ ls -la /shared/change/
+total 8
+drwxr-sr-t 2 user shared 4096 фев 20 18:48 .
+drwxrwsrwx 3 user shared 4096 фев 20 18:43 ..
+user@dmgb2006:~$

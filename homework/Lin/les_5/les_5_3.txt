@@ -1,0 +1,20 @@
+user@dmgb2006:~$ echo > file2
+user@dmgb2006:~$ chmod g-r g-w o-r file2
+chmod: cannot access 'g-w': No such file or directory
+chmod: cannot access 'o-r': No such file or directory
+user@dmgb2006:~$ chmod g-w file2
+user@dmgb2006:~$ chmod o-r file2
+user@dmgb2006:~$ ls- la
+-rw-rw-r-- 1 user user      1 фев 20 15:47 file1
+-rw------- 1 user user      1 фев 20 15:54 file2
+
+user@dmgb2006:~$ echo > file3
+user@dmgb2006:~$ chmod 000 file3
+user@dmgb2006:~$ ls -la
+---------- 1 user user      1 фев 20 16:01 file3
+user@dmgb2006:~$ chmod 664 file3
+user@dmgb2006:~$ echo > file4
+user@dmgb2006:~$ chmod 600 file4
+user@dmgb2006:~$ ls -la
+-rw-rw-r-- 1 user user      1 фев 20 16:01 file3
+-rw------- 1 user user      1 фев 20 16:02 file4

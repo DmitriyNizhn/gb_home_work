@@ -1,0 +1,17 @@
+user@dmgb2006:~$ chmod g+s /shared
+user@dmgb2006:~$ ls -la /shared/
+total 8
+drwxrwsrwx  2 user shared 4096 фев 20 18:37 .
+drwxr-xr-x 21 root root   4096 фев 20 18:30 ..
+user@dmgb2006:~$ touch /shared/user
+user@dmgb2006:~$ ls -la /shared/
+total 8
+drwxrwsrwx  2 user shared 4096 фев 20 18:38 .
+drwxr-xr-x 21 root root   4096 фев 20 18:30 ..
+-rw-rw-r--  1 user shared    0 фев 20 18:38 user
+user@dmgb2006:~$ echo "sadasf" >> /shared/user3
+user@dmgb2006:~$ cat /shared/user3
+ryjnadj
+da
+sadasf
+user@dmgb2006:~$
