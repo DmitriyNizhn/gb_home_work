@@ -1,0 +1,9 @@
+# To disable tunneled clear text passwords, change to no here!
+#PasswordAuthentication no
+#PermitEmptyPasswords no
+
+user@dmgb2006:~$ systemctl reload sshd.service
+user@dmgb2006:~$ systemctl restart sshd.service
+
+
+Рестарт завершил сеанс ssh соединения.

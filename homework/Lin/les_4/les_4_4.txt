@@ -1,0 +1,5 @@
+user@dmgb2006:~$ kill -9 2109
+user@dmgb2006:~$ pgrep mc
+2186
+[1]-  Killed                  mc
+user@dmgb2006:~$
