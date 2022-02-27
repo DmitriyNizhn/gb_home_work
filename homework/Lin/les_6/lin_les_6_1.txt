@@ -1,0 +1,14 @@
+user@dmgb2006:~$ cat ex1
+
+
+
+ad
+user@dmgb2006:~$ sed 's/[a-z]/\U&/g' ex1 ; sed '/^$/d' ex1
+
+
+
+AD
+ad
+user@dmgb2006:~$ sed -i 's/[a-z]/\U&/g' ex1 ; sed -i '/^$/d' ex1
+user@dmgb2006:~$ cat ex1
+AD

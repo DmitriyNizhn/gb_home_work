@@ -1,0 +1,9 @@
+user@dmgb2006:~$ ls -l | awk '{ print $1 }'| sort -u
+drwxrwxr-x
+drwxr-xr-x
+-rw-------
+-rw-r--r--
+-rw-rw-r--
+-rwxrwxr-x
+total
+
