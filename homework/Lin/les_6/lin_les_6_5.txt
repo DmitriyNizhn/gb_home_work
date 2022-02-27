@@ -1,0 +1,55 @@
+#Так и не разобрался в чем дело, почему не работает.
+
+user@dmgb2006:~$ sudo at -f /home/user/reboot.sh 10:31
+warning: commands will be executed using /bin/sh
+job 34 at Sun Feb 27 10:31:00 2022
+user@dmgb2006:~$ date
+Вс 27 фев 2022 07:30:39 UTC
+user@dmgb2006:~$ date
+Вс 27 фев 2022 07:31:03 UTC
+user@dmgb2006:~$ pwd
+/home/user
+user@dmgb2006:~$ cat reboot.sh
+#!/bin/sh
+/sbin/reboot
+user@dmgb2006:~$
+
+-rwxrwxr-x  1 user user     23 фев 26 20:13 reboot.sh
+
+
+user@dmgb2006:~$ nano reboot.sh
+user@dmgb2006:~$ chmod +x reboot.sh
+user@dmgb2006:~$ sudo at -f /home/user/reboot.sh 22:14
+warning: commands will be executed using /bin/sh
+job 27 at Sat Feb 26 22:14:00 2022
+user@dmgb2006:~$ date
+Сб 26 фев 2022 19:13:40 UTC
+user@dmgb2006:~$ date
+Сб 26 фев 2022 19:14:09 UTC
+user@dmgb2006:~$ cat reboot.sh
+#!/bin/bash
+reboot
+
+
+user@dmgb2006:~$ echo reboot | sudo at 22:12
+warning: commands will be executed using /bin/sh
+job 26 at Sat Feb 26 22:12:00 2022
+user@dmgb2006:~$ date
+Сб 26 фев 2022 19:11:28 UTC
+user@dmgb2006:~$ date
+Сб 26 фев 2022 19:12:11 UTC
+
+
+#at работает
+user@dmgb2006:~$ cat test
+asdasd
+user@dmgb2006:~$ echo a1313sdad >> /home/user/test | at 22:11
+warning: commands will be executed using /bin/sh
+job 25 at Sat Feb 26 22:11:00 2022
+user@dmgb2006:~$ date
+Сб 26 фев 2022 19:10:25 UTC
+user@dmgb2006:~$ date
+Сб 26 фев 2022 19:10:44 UTC
+user@dmgb2006:~$ cat test
+asdasd
+a1313sdad

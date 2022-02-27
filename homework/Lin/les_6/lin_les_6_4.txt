@@ -1,0 +1,46 @@
+user@dmgb2006:/$ grep "Started" /var/log/syslog
+Feb 16 17:07:21 dmgb2006 systemd[1]: Started OpenBSD Secure Shell server.
+Feb 16 17:07:21 dmgb2006 systemd[1]: Started LSB: automatic crash report generation.
+Feb 16 17:07:21 dmgb2006 systemd[1]: Started Login Service.
+Feb 16 17:07:21 dmgb2006 systemd[1]: Started Unattended Upgrades Shutdown.
+Feb 16 17:07:22 dmgb2006 systemd[1]: Started Hostname Service.
+Feb 16 17:07:22 dmgb2006 systemd[1]: Started Authorization Manager.
+Feb 16 17:07:22 dmgb2006 systemd[1]: Started Dispatcher daemon for systemd-networkd.
+Feb 16 17:07:22 dmgb2006 systemd[1]: Started Accounts Service.
+Feb 16 17:07:23 dmgb2006 systemd[1]: Started Disk Manager.
+Feb 16 17:07:25 dmgb2006 systemd[1]: Started Snap Daemon.
+Feb 16 17:07:25 dmgb2006 systemd[1]: Started Time & Date Service.
+Feb 16 17:07:34 dmgb2006 systemd[1]: Started vboxadd-service.service.
+Feb 16 17:12:27 dmgb2006 systemd[1]: Started Time & Date Service.
+Feb 16 17:17:36 dmgb2006 systemd[1]: Started Snap Daemon.
+Feb 16 17:17:36 dmgb2006 systemd[1]: Started Time & Date Service.
+Feb 16 17:18:39 dmgb2006 systemd[1]: Started Time & Date Service.
+Feb 16 17:23:39 dmgb2006 systemd[1]: Started Time & Date Service.
+Feb 16 17:26:37 dmgb2006 systemd[1]: Started User Manager for UID 1000.
+Feb 16 17:26:37 dmgb2006 systemd[1]: Started Session 2 of user user.
+Feb 17 17:02:11 dmgb2006 systemd[1]: Started udev Kernel Device Manager.
+Feb 17 17:02:11 dmgb2006 systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+Feb 17 17:02:11 dmgb2006 systemd[1]: Started Device-Mapper Multipath Device Controller.
+Feb 17 17:02:11 dmgb2006 systemd[1]: Started File System Check Daemon to report status.
+Feb 17 17:02:11 dmgb2006 systemd[1]: Started Network Service.
+Feb 17 17:02:11 dmgb2006 systemd[1]: Started Network Name Resolution.
+Feb 17 17:02:11 dmgb2006 systemd[1]: Started Daily apt download activities.
+Feb 17 17:02:11 dmgb2006 systemd[1]: Started Daily apt upgrade and clean activities.
+Feb 17 17:02:11 dmgb2006 systemd[1]: Started Periodic ext4 Online Metadata Check for All Filesystems.
+Feb 17 17:02:11 dmgb2006 systemd[1]: Started Discard unused blocks once a week.
+Feb 17 17:02:11 dmgb2006 systemd[1]: Started Refresh fwupd metadata regularly.
+Feb 17 17:02:11 dmgb2006 systemd[1]: Started Daily rotation of log files.
+Feb 17 17:02:11 dmgb2006 systemd[1]: Started Daily man-db regeneration.
+Feb 17 17:02:11 dmgb2006 systemd[1]: Started Message of the Day.
+Feb 17 17:02:11 dmgb2006 systemd[1]: Started Daily Cleanup of Temporary Directories.
+Feb 17 17:02:11 dmgb2006 systemd[1]: Started Ubuntu Advantage update messaging.
+Feb 17 17:02:11 dmgb2006 systemd[1]: Started Regular background program processing daemon.
+Feb 17 17:02:11 dmgb2006 systemd[1]: Started D-Bus System Message Bus.
+Feb 17 17:02:11 dmgb2006 systemd[1]: Started Save initial kernel messages after boot.
+Feb 17 17:02:11 dmgb2006 systemd[1]: Started irqbalance daemon.
+Feb 17 17:02:11 dmgb2006 systemd[1]: Started Deferred execution scheduler.
+Feb 17 17:02:11 dmgb2006 systemd[1]: Started Getty on tty1.
+Feb 17 17:02:11 dmgb2006 systemd[1]: Started System Logging Service.
+Feb 17 17:02:11 dmgb2006 kernel: [    8.883116] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+Feb 17 17:02:11 dmgb2006 kernel: [    9.660426] systemd[1]: Started Journal Service.
+Binary file /var/log/syslog matches
