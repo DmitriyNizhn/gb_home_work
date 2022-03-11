@@ -1,0 +1,18 @@
+user@dmgb2006:~$ sudo snap search nano
+Name             Version                        Publisher           Notes    Summary
+nano             5.7+pkg-4057                   snapcrafters        classic  Small, friendly text editor inspired by Pico
+nanowallet       1.4.0                          nem                 -        A secure interface into the NEM blockchain platform.
+nano-strict      5.2+pkg-353f                   brlin               -        Small, friendly text editor (Strict Confinement)
+nano-editor      2.6.3                          rws                 -        The nano text editor
+joplin           2.3.2                          3v1n0               -        Open source note taking and to-do application - Terminal version
+converternow     3.1.1                          ferraridamiano      -        A simple, immediate and fast converter! ⚡
+thelounge        4.2.0                          snapcrafters        -        The Lounge — Self-hosted web IRC client
+v4l2-rtspserver  0+git.79a13bd                  mpromonet           -        RTSP Server for V4L2 device capture supporting HEVC/H264/JPEG/VP8/VP9
+x86latency-test  V0.0.3-2-20210917-22-gdaf73a9  cking-kernel-tools  -        Intel x86 kernel timer latency test
+hello-dgonano    2.10                           dgonano             -        GNU hellow world snap
+user@dmgb2006:~$ sudo snap in
+info       install    interface
+user@dmgb2006:~$ sudo snap install nano-editor
+nano-editor 2.6.3 from Roderick Smith (rws) installed
+user@dmgb2006:~$ nano-editor.nano
+user@dmgb2006:~$

@@ -1,0 +1,76 @@
+#Сначала не устанавливался с ошибкой
+user@dmgb2006:~$ sudo dpkg -i nginx_1.18.0-0ubuntu1.2_all.deb
+(Чтение базы данных … на данный момент установлено 112849 файлов и каталогов.)
+Подготовка к распаковке nginx_1.18.0-0ubuntu1.2_all.deb …
+Распаковывается nginx (1.18.0-0ubuntu1.2) на замену (1.18.0-0ubuntu1.2) …
+dpkg: зависимости пакетов не позволяют настроить пакет nginx:
+ nginx зависит от nginx-core (<< 1.18.0-0ubuntu1.2.1~) | nginx-full (<< 1.18.0-0ubuntu1.2.1~) | nginx-light (<< 1.18.0-0ubuntu1.2.1~) | nginx-extras (<< 1.18.0-0ubuntu1.2.1~), однако:
+  Пакет nginx-core не установлен.
+  Пакет nginx-full не установлен.
+  Пакет nginx-light не установлен.
+  Пакет nginx-extras не установлен.
+ nginx зависит от nginx-core (>= 1.18.0-0ubuntu1.2) | nginx-full (>= 1.18.0-0ubuntu1.2) | nginx-light (>= 1.18.0-0ubuntu1.2) | nginx-extras (>= 1.18.0-0ubuntu1.2), однако:
+  Пакет nginx-core не установлен.
+  Пакет nginx-full не установлен.
+  Пакет nginx-light не установлен.
+  Пакет nginx-extras не установлен.
+
+dpkg: ошибка при обработке пакета nginx (--install):
+ проблемы зависимостей — оставляем не настроенным
+При обработке следующих пакетов произошли ошибки:
+ nginx
+
+user@dmgb2006:~$ sudo dpkg -l nginx
+Желаемый=неизвестно[u]/установить[i]/удалить[r]/вычистить[p]/зафиксировать[h]
+| Состояние=не[n]/установлен[i]/настроен[c]/распакован[U]/частично настроен[F]/
+            частично установлен[H]/trig-aWait/Trig-pend
+|/ Ошибка?=(нет)/требуется переустановка[R] (верхний регистр
+в полях состояния и ошибки указывает на ненормальную ситуацию)
+||/ Имя            Версия            Архитектура  Описание
++++-==============-=================-============-==========================================
+iU  nginx          1.18.0-0ubuntu1.2 all          small, powerful, scalable web/proxy server
+
+user@dmgb2006:~$ sudo dpkg -r nginx
+(Чтение базы данных … на данный момент установлено 112849 файлов и каталогов.)
+Удаляется nginx (1.18.0-0ubuntu1.2) …
+user@dmgb2006:~$ nginx -V
+
+user@dmgb2006:~$ sudo dpkg -r nginx
+(Чтение базы данных … на данный момент установлено 112849 файлов и каталогов.)
+Удаляется nginx (1.18.0-0ubuntu1.2) …
+user@dmgb2006:~$ sudo dpkg -l nginx
+dpkg-query: шаблону nginx не соответствует ни один пакет
+user@dmgb2006:~$
+Command 'nginx' not found, but can be installed with:
+
+sudo apt install nginx-core    # version 1.18.0-0ubuntu1.2, or
+sudo apt install nginx-extras  # version 1.18.0-0ubuntu1.2
+sudo apt install nginx-full    # version 1.18.0-0ubuntu1.2
+sudo apt install nginx-light   # version 1.18.0-0ubuntu1.2
+
+#Создал пустую дирректорию и тогда все установилось.
+
+user@dmgb2006:~/les7$ sudo apt download nginx
+Пол:1 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 nginx all 1.18.0-0ubuntu1.2 [3 620 B]
+Получено 3 620 B за 0с (9 386 B/s)
+W: Загрузка выполняется от лица суперпользователя без ограничений песочницы, так как файл «/home/user/les7/nginx_1.18.0-0ubuntu1.2_all.deb» недоступен для пользователя «_apt». - pkgAcquire::Run (13: Permission denied)
+user@dmgb2006:~/les7$ ls -la
+total 12
+drwxrwxr-x  2 user user 4096 мар  1 19:12 .
+drwxr-xr-x 11 user user 4096 мар  1 19:09 ..
+-rw-r--r--  1 root root 3620 мая 26  2021 nginx_1.18.0-0ubuntu1.2_all.deb
+user@dmgb2006:~/les7$ sudo dpkg -i nginx_1.18.0-0ubuntu1.2_all.deb
+Выбор ранее не выбранного пакета nginx.
+(Чтение базы данных … на данный момент установлено 113070 файлов и каталогов.)
+Подготовка к распаковке nginx_1.18.0-0ubuntu1.2_all.deb …
+Распаковывается nginx (1.18.0-0ubuntu1.2) …
+Настраивается пакет nginx (1.18.0-0ubuntu1.2) …
+user@dmgb2006:~/les7$ sudo dpkg -l nginx
+Желаемый=неизвестно[u]/установить[i]/удалить[r]/вычистить[p]/зафиксировать[h]
+| Состояние=не[n]/установлен[i]/настроен[c]/распакован[U]/частично настроен[F]/
+            частично установлен[H]/trig-aWait/Trig-pend
+|/ Ошибка?=(нет)/требуется переустановка[R] (верхний регистр
+в полях состояния и ошибки указывает на ненормальную ситуацию)
+||/ Имя            Версия            Архитектура  Описание
++++-==============-=================-============-==========================================
+ii  nginx          1.18.0-0ubuntu1.2 all          small, powerful, scalable web/proxy server

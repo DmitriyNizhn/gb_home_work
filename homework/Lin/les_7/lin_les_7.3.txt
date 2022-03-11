@@ -1,0 +1,20 @@
+user@dmgb2006:~$ sudo iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
+user@dmgb2006:~$ sudo iptables -A OUTPUT -p tcp -m tcp --sport 80 -j ACCEPT
+user@dmgb2006:~$ sudo iptables -L -n -v --line-numbers
+Chain INPUT (policy DROP 0 packets, 0 bytes)
+num   pkts bytes target     prot opt in     out     source               destination
+1       72  5648 ACCEPT     all  --  lo     *       0.0.0.0/0            0.0.0.0/0
+2        2   120 ACCEPT     icmp --  *      *       0.0.0.0/0            0.0.0.0/0
+3      336 24201 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:22
+4        0     0 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:80
+
+Chain FORWARD (policy DROP 0 packets, 0 bytes)
+num   pkts bytes target     prot opt in     out     source               destination
+
+Chain OUTPUT (policy DROP 0 packets, 0 bytes)
+num   pkts bytes target     prot opt in     out     source               destination
+1       72  5648 ACCEPT     all  --  *      lo      0.0.0.0/0            0.0.0.0/0
+2       11   876 ACCEPT     icmp --  *      *       0.0.0.0/0            0.0.0.0/0
+3      246 27017 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp spt:22
+4        0     0 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp spt:80
+user@dmgb2006:~$
