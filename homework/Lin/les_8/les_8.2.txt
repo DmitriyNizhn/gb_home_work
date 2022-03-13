@@ -1,0 +1,64 @@
+user@dmgb2006:~/compose_php2$ cat docker-compose.yml
+version: '3'
+
+services:
+  app:
+    image: spaceonfire/nginx-php-fpm:latest
+    environment:
+      - SOF_PRESET=wordpress
+      - SKIP_CHOWN=1
+      - PUID=1000
+      - ENABLE_XDEBUG=1
+    volumes:
+      - ./:/var/www/html:Z
+    ports:
+      - 8080:80
+user@dmgb2006:~/compose_php2$ docker-compose up -d
+Creating network "compose_php2_default" with the default driver
+Creating compose_php2_app_1 ... done
+user@dmgb2006:~/compose_php2$ docker-compose top
+compose_php2_app_1
+UID     PID    PPID    C   STIME   TTY     TIME                                     CMD
+------------------------------------------------------------------------------------------------------------------------
+root   10289   10261   0   12:43   ?     00:00:00   /usr/bin/python3 /usr/bin/supervisord -n -c /etc/supervisord.conf
+root   10410   10289   0   12:43   ?     00:00:00   php-fpm: master process (/usr/local/etc/php-fpm.d/www.conf)
+root   10411   10289   0   12:43   ?     00:00:00   nginx: master process /usr/sbin/nginx -g daemon off; error_log
+                                                    /dev/stderr info;
+user   10412   10411   0   12:43   ?     00:00:00   nginx: worker process
+user   10413   10410   0   12:43   ?     00:00:00   php-fpm: pool www
+user   10414   10410   0   12:43   ?     00:00:00   php-fpm: pool www
+user   10415   10410   0   12:43   ?     00:00:00   php-fpm: pool www
+_________________
+#Вариант 2
+_________________
+
+user@dmgb2006:~/lesson8/hw/ex2$ docker-compose up -d
+user@dmgb2006:~/lesson8/hw/ex2$ docker-compose ps
+    Name                   Command               State                        Ports
+---------------------------------------------------------------------------------------------------------
+ex2_nginx_1     /docker-entrypoint.sh ngin ...   Up      80/tcp, 0.0.0.0:8001->8080/tcp,:::8001->8080/tcp
+ex2_php-fpm_1   php-fpm -F --pid /opt/bitn ...   Up      9000/tcp
+user@dmgb2006:~/lesson8/hw/ex2$ cat docker-compose.yml
+version: '3.3'
+
+services:
+
+  nginx:
+    image: nginx:latest
+    restart: always
+    ports:
+      - 8001:8080
+
+  php-fpm:
+    image: docker.io/bitnami/php-fpm:8.1
+    restart: always
+user@dmgb2006:~/lesson8/hw/ex2$ docker-compose down
+Stopping ex2_nginx_1   ... done
+Stopping ex2_php-fpm_1 ... done
+Removing ex2_nginx_1   ... done
+Removing ex2_php-fpm_1 ... done
+Removing network ex2_default
+user@dmgb2006:~/lesson8/hw/ex2$ docker-compose ps
+Name   Command   State   Ports
+------------------------------
+user@dmgb2006:~/lesson8/hw/ex2$

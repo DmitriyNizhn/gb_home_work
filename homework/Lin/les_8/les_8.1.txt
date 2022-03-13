@@ -1,0 +1,7 @@
+user@dmgb2006:~/lesson8/compose/1$ sudo docker run ubuntu echo "Hello"
+Hello
+user@dmgb2006:~/lesson8/compose/1$ sudo docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS                      PORTS     NAMES
+08d18ca10529   ubuntu         "echo Hello"             15 seconds ago   Exited (0) 14 seconds ago             elegant_tereshkova
+62f499274221   d8b3e97b2abf   "/bin/sh -c '/usr/sb…"   3 hours ago      Exited (137) 3 hours ago              nifty_tu
+a7fa81207a17   d8b3e97b2abf   "/bin/sh -c '/usr/sb…"   3 hours ago      Exited (137) 3 hours ago              fervent_bohr
